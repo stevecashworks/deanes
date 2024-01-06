@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Hero from "./hero";
 import About from "./about";
 import Services from "./services";
+import Resume from "./resume";
 
 const Container = styled.div`
   background-color: white;
@@ -24,6 +25,7 @@ export const Content = () => {
     <Hero/>
     <About/>
     <Services/>
+    <Resume/>
     </Container>
     );
 };
