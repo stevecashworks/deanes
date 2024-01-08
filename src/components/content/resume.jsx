@@ -12,6 +12,8 @@ const ResumeContainer= styled.div`
 margin:20px auto;
 width:80%;
 display:flex;
+flex-direction:row-reverse;
+gap:30px;
 
 
 
@@ -20,17 +22,30 @@ const DetailCon=styled.div`
 flex:1;
 `
 const ConTitle=styled.div`
+font-size:25px;
+font-weight:700;
+&:after{
+    content:":";
+}
 `
 const CardCon=styled.div`
 widtrh:400px;
 height:200px;
 border:1px solid rgb(0,0,0,0.2);
 margin:20px 0;
-padding:12px;
+padding:15px;
+box-sizing:border-box;
 border-radius:5px;
 
 
 `
+const InstitutionCon=styled.div`
+color:var(--crim);
+margin:20px 0;
+`
+const DegreeCon = styled.div`
+  margin: 20px 0;
+`;
 const DateBtn=styled.button`
 background-color:var(--teal);
 color: white;
@@ -39,11 +54,30 @@ const EducationCard=({Degree, CompletionDate, Institution})=>{
     return(
         <CardCon>
             <DateBtn>{`${CompletionDate.Month} ${CompletionDate.Year}`}</DateBtn>
-
+            <InstitutionCon>{Institution}</InstitutionCon>
+            <DegreeCon>{Degree}</DegreeCon>
         </CardCon>
     )
 }
 
+const Exp = ({Position, StartDate, EndDate, Company,Responsibilities}) =>{
+  let dateStr
+  if(EndDate){
+    dateStr= `${StartDate.Year} - ${EndDate.Year}`
+  }
+  else{
+    dateStr=`${StartDate.Year} - Present`
+  }
+    return(
+    <CardCon style={{height:"250px"}}>
+      <DateBtn>{dateStr}</DateBtn>
+      <InstitutionCon>{Company}</InstitutionCon>
+      <InstitutionCon style={{color:"black"}}>{Position}</InstitutionCon>
+      <DegreeCon>{Responsibilities[0]}</DegreeCon>
+
+    </CardCon>
+    )
+}
 const Resume= () =>{
 return (
   <Container>
@@ -57,8 +91,9 @@ return (
           <EducationCard {...item} />
         ))}
       </DetailCon>
-      <DetailCon>
+      <DetailCon style={{marginLeft:"30px"}}>
         <ConTitle>Experience</ConTitle>
+        {experienceDetails.map(exp=><Exp {...exp}/>)}
       </DetailCon>
     </ResumeContainer>
   </Container>
