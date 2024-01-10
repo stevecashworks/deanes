@@ -6,3 +6,6 @@
   --alternate-background:rgb(199, 211, 226, 0.4);
   --crim:rgb(221, 27, 27);
 }
+body{
+  scroll-behavior: smooth;
+}

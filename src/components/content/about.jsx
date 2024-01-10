@@ -122,7 +122,7 @@ const achievements=[
 ]
 const About= () => {
     return (
-      <Container>
+      <Container id="about">
         <Header>About Me</Header>
         <Text>Know Me Better</Text>
         <AboutDetails>

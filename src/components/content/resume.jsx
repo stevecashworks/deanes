@@ -89,7 +89,7 @@ const Exp = ({Position, StartDate, EndDate, Company,Responsibilities}) =>{
 }
 const Resume= () =>{
 return (
-  <Container>
+  <Container id="resume">
     <Header>Resume</Header>
     <Text>Work & Education</Text>
     <ResumeContainer>

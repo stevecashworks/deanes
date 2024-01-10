@@ -126,7 +126,7 @@ const Hero = () => {
     })
   const   job= "Financial Analyst"
 return (
-  <VideoCon>
+  <VideoCon id="home">
     <Video src={vid} autoPlay muted loop></Video>
 
     <Shadow>

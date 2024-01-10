@@ -90,7 +90,7 @@ const Address =[
 "Dubai, UAE" ]
 const Contact = () => {
     return (
-      <Container>
+      <Container id="contact">
         <Header style={{ color: "rgb(0,0,0,0.2)" }}>Contact</Header>
         <Text>Keep in touch.</Text>
         <ContactCon>

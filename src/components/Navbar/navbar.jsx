@@ -52,7 +52,7 @@ const Socials = styled.div`
   margin-left: 40px;
 `;
 export const icons = [FaInstagram, FaLinkedin, FaFacebook, FaTwitter];
-const linksList=[
+export const linksList=[
     {text:"Home",path:"#home"},
     {text:"About",path:"#about"},
     {text:"Services",path:"#services"},
