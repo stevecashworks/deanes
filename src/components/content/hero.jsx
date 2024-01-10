@@ -4,34 +4,53 @@ import { useState,useEffect } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 const VideoCon=styled.div`
 position:relative;
-height:100%;
+height:100vh;
 width:100%;
-top:0
-`
-const Video=styled.video`
-width:calc(100vw - 250px);
-height:100%
-position:absolute;
 top:0;
-left:0;
-z-index:1;
+background:green;
+@media (max-width: 800px) {
+  height:600px;
+}
 
 `
- const Shadow=styled.div`
- position:absolute;
- width:100%;
- height:100%;
- background-color:rgb(0,0,0,0.9);
- z-index:2;
- top:0;
- left:0;
- display:flex;
- align-items:center;
- justify-content:center;
- `
- const ContentCon=styled.div`
-
- `
+const Video = styled.video`
+  width: calc(100vw - 250px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  @media (max-width: 800px) {
+    height: 600px;
+    width:100vw;
+    display:block
+  }
+`;
+ const Shadow = styled.div`
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0, 0, 0, 0.9);
+   z-index: 2;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   @media (max-width: 800px) {
+     height: 600px;
+     background-color: rgb(0, 0, 0, 0.8);
+   }
+ `;
+ const ContentCon = styled.div`
+   @media (max-width: 800px) {
+     height: 600px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction:column;
+   }
+ `;
  const Intro=styled.p`
  font-size:20px;
  font-weight:700;

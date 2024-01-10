@@ -7,6 +7,10 @@ const Container=styled.div`
 background-color:var(--alternate-background);
 padding-top:20px;
 color:black;
+@media (max-width:800px){
+  height:auto;
+  width:100%;
+}
 `
 const ServicesCon=styled.div`
 display:flex;
@@ -16,14 +20,21 @@ margin:20px auto;
 gap:30px;
 box-sizing:border-box;
 padding-right:50px;
+@media (max-width: 800px) {
+  flex-direction:column;
+  padding-right:10px;
+}
 `
-const ServiceCon=styled.div`
-width:400px;
-display:flex;
-gap:20px;
-background-color:rgb(255,255,255,0.2);
-padding:10px;
-`
+const ServiceCon = styled.div`
+  width: 400px;
+  display: flex;
+  gap: 20px;
+  background-color: rgb(255, 255, 255, 0.2);
+  padding: 10px;
+  @media (max-width: 800px) {
+    width:250px;
+  }
+`;
 const IconCon=styled.div`
 display:flex;
 align-items:center;
@@ -58,12 +69,12 @@ const   Services= () => {
 return (
   <Container>
     <Header
-      style={{ color: "rgb(0,0,0,0.1)", position: "relative", right: "100px" }}
+    
     >
       Services
     </Header>
     <Text
-      style={{  position: "relative", right: "100px" }}
+    
     >
       What I Do
     </Text>

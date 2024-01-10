@@ -3,6 +3,8 @@ import Hero from "./hero";
 import About from "./about";
 import Services from "./services";
 import Resume from "./resume";
+import Skills from "./skills";
+import Contact from "./contact";
 
 const Container = styled.div`
   background-color: white;
@@ -14,6 +16,10 @@ const Container = styled.div`
   width:calc(100vw - 250px);
   left:250px;
   overflow-x:hidden;
+  @media (max-width: 800px){
+    left:0;
+    width:100vw;
+  }
   
 
 `;
@@ -26,6 +32,8 @@ export const Content = () => {
     <About/>
     <Services/>
     <Resume/>
+    <Skills/>
+    <Contact/>
     </Container>
     );
 };

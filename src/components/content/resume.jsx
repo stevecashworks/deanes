@@ -2,22 +2,22 @@ import styled from "styled-components";
 import { Header,Text } from "./about";
 import { educationDetails,experienceDetails } from "./resumedata";
 const Container=styled.div`
-height:100vh;
+height:auto;
 background-color:white;
 width:100%;
 color:black;
 z-index:9;
 `
-const ResumeContainer= styled.div`
-margin:20px auto;
-width:80%;
-display:flex;
-flex-direction:row-reverse;
-gap:30px;
-
-
-
-`
+const ResumeContainer = styled.div`
+  margin: 20px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 30px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
 const DetailCon=styled.div`
 flex:1;
 `
@@ -28,23 +28,32 @@ font-weight:700;
     content:":";
 }
 `
-const CardCon=styled.div`
-widtrh:400px;
-height:200px;
-border:1px solid rgb(0,0,0,0.2);
-margin:20px 0;
-padding:15px;
-box-sizing:border-box;
-border-radius:5px;
-
-
-`
-const InstitutionCon=styled.div`
-color:var(--crim);
-margin:20px 0;
-`
+const CardCon = styled.div`
+  width: 400px;
+  height: 200px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  margin: 20px 0;
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  @media (max-width: 800px) {
+    height:auto;
+    width:250px;
+    font-size:14px;
+  }
+`;
+const InstitutionCon = styled.div`
+  color: var(--crim);
+  margin: 20px 0;
+  @media (max-width: 800px) {
+    margin:5px 0;
+  }
+`;
 const DegreeCon = styled.div`
   margin: 20px 0;
+  @media (max-width: 800px) {
+    margin:5px 0;
+  }
 `;
 const DateBtn=styled.button`
 background-color:var(--teal);

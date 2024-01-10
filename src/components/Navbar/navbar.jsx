@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import {css} from "styled-components"
 import headshot from "../../assets/images/img1.jpeg"
 import {
   FaInstagram,
@@ -13,6 +14,10 @@ height:100vh;
 color:rgb(255,244,255,0.9);
 position:fixed;
 width:250px;
+@media (max-width:800px) {
+  display: none;
+  
+};
 `
 
 const Img = styled.img`
@@ -46,7 +51,7 @@ const Socials = styled.div`
   gap: 15px;
   margin-left: 40px;
 `;
-const icons = [FaInstagram, FaLinkedin, FaFacebook, FaTwitter];
+export const icons = [FaInstagram, FaLinkedin, FaFacebook, FaTwitter];
 const linksList=[
     {text:"Home",path:"#home"},
     {text:"About",path:"#about"},
@@ -54,6 +59,15 @@ const linksList=[
     {text:"Resume",path:"#resume"},
     {text:"Contact",path:"#contact"},
 ]
+export const ExportSocials= ()=>{
+  return (
+    <Socials style={{position:"relative", right:"40px",top:"20px"}}>
+      {icons.map((Icon) => (
+        <Icon style={{ fontSize: "20px", color:"rgb(0,0,0,0.4)"}} />
+      ))}
+    </Socials>
+  );
+}
 const Navbar= () => {
 return (
   <Container>

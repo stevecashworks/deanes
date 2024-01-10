@@ -36,6 +36,9 @@ display:flex;
 padding: 20px ;
 gap:30px;
 margin:10px auto;
+@media (max-width: 800px) {
+  flex-direction:column;
+}
 
 `
 const Left=styled.div`
@@ -88,6 +91,7 @@ display:flex;
 width:80%;
 margin:20px auto;
 justify-content:center;
+
 `
 const Achievement=styled.div` 
 width:250px;
@@ -95,14 +99,19 @@ border-right: ${props=>props.b?"1px solid rgb(0,0,0,0.1)":"none"};
 display:flex;
 flex-direction:column;
 align-items:center;
+@media (max-width:800px){
+  width:70px;
+}
 
 
 `
 const StatVal=styled.h1`
 color:rgb(0,0,0,0.3);
+font-size:20px;
 `
 const StatName = styled.p`
   color: rgb(0, 0, 0, 0.7);
+  width:70px;
 `;
 const achievements=[
 
